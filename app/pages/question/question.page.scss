@@ -1,0 +1,121 @@
+//==============================================================
+// Progress bars
+.progress {
+  overflow: hidden;
+  height: 5px;
+  margin-bottom: 2px;
+  background-color: #ecf0f1;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 13px;
+  line-height: 21px;
+  color: #ffffff;
+  text-align: center;
+  background-color: map-get($colors, correct);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+
+//==============================================================
+// Animations
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+.answer-correct {
+  background: map-get($colors, correct);
+}
+
+.answer-incorrect {
+  background: map-get($colors, incorrect);
+}
+
+.answer-selected {
+  background: map-get($colors, selected);
+}
+
+.glow-red {
+  //-moz-box-shadow: 0 0 5px #DD1C1A;
+  //-webkit-box-shadow: 0 0 5px #DD1C1A;
+  outline:none;
+  border-color:#DD1C1A;
+  box-shadow:0 0 10px #DD1C1A;
+}
+.glow-green {
+  -webkit-font-smoothing: antialiased;
+  //-moz-box-shadow: 0 0 5px #04F06A;
+  //-webkit-box-shadow: 0 0 5px #04F06A;
+  outline:none;
+  border-color:#04F06A;
+  box-shadow:0 0 10px #04F06A;
+}
+
+.glow-blue {
+  //-moz-box-shadow: 0 0 5px #1CCAD8;
+  //-webkit-box-shadow: 0 0 5px #1CCAD8;
+  outline:none;
+  border-color:#1CCAD8;
+  box-shadow:0 0 10px #1CCAD8;
+}
+
+.answer {
+  transition: height 2s, transform 1s;
+}
+
+.collapse {
+  transition: all .5s ease-out;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}

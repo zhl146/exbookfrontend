@@ -1,0 +1,31 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+
+@import "../pages/home/home.page";
+@import "../pages/question/question.page";
+@import "../pages/quest/quest.page";
+@import "../pages/loading/loading.page";
+
+.overlay {
+  margin-top: 6em;
+}
+
+.auth0-lock.auth0-lock .auth0-lock-header {
+  background: #FFFFFF;
+  height: 150px;
+}
+
+.auth0-lock.auth0-lock .auth0-lock-header-logo {
+  height: 100px;
+}
+
+.auth0-lock.auth0-lock .auth0-lock-header-bg .auth0-lock-header-bg-solid {
+  background: #FFFFFF;
+  opacity: 0;
+}

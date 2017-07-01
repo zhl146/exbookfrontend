@@ -1,0 +1,4 @@
+{
+    "extends": "tslint-ionic-rules",
+    "rulesDirectory": ["node_modules/codelyzer"]
+}
